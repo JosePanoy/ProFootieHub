@@ -1,10 +1,27 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
+import Teams from './assets/pages/teams'
+import Matches from './assets/pages/matches'
+import Players from './assets/pages/players'
+import Standings from './assets/pages/standings'
+
 import App from './App'
 import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+
+const root = createRoot(document.getElementById('root'));
+
+root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <Router>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/teams" element={<Teams />} />
+        <Route path="/matches" element={<Matches />} />
+        <Route path="/players" element={<Players />} />
+        <Route path="/standings" element={<Standings />} />
+      </Routes>
+    </Router>
+  </React.StrictMode>
 )
