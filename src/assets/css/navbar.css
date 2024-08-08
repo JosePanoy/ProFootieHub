@@ -177,6 +177,72 @@ html, body {
     }
 
     .site-name {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-links {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 15px; 
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1002;
+    }
+
+    .search-bar {
+        margin-left: 5px;
+        margin-right: 50px; 
+    }
+
+    .search-bar input {
+        padding: 2px;
+        width: 80px; 
+    }
+
+    .search-icon {
         font-size: 1rem;
+    }
+
+    .navbar-logo {
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+    }
+
+    .site-logo {
+        height: 25px;
+        margin-right: 8px;
+    }
+
+    .site-name {
+        font-size: 11px;
+    }
+}
+
+@media (min-width: 341px) and (max-width: 480px) {
+    .search-bar {
+        margin-left: 7px;
+    }
+
+    .search-bar input {
+        width: 90px; 
+    }
+
+    .search-icon {
+        font-size: 1.1rem;
+    }
+
+    .site-logo {
+        height: 28px;
+    }
+
+    .site-name {
+        font-size: 12px;
     }
 }
