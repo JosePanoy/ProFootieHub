@@ -39,7 +39,9 @@ const Teams = () => {
         <>
             <Navbar />
             <div className="teams-section">
+
                 <h2 className="section-title">La Liga Teams</h2>
+
                 <div className="teams-container">
                     {teams1.map(team => (
                         <div className="team-card" key={team.idTeam}>
@@ -51,7 +53,8 @@ const Teams = () => {
             </div>
             <div className="teams-section">
                 <h2 className="section-title">English Premier League</h2>
-                <div className="teams-container secondary-container">
+
+                <div className="teams-container">
                     {teams2.map(team => (
                         <div className="team-card" key={team.idTeam}>
                             <img src={team.strBadge} alt={`${team.strTeam} Badge`} className="team-badge" />
