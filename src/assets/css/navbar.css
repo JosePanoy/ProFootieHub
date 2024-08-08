@@ -145,7 +145,7 @@ html, body {
     .menu-icon {
         display: block;
         position: absolute;
-        right: 25px; /* Adjusted position */
+        right: 25px; 
         top: 50%;
         transform: translateY(-50%);
         z-index: 1002;
@@ -157,8 +157,8 @@ html, body {
     }
 
     .search-bar input {
-        padding: 5px;
-        width: 150px; /* Increased width */
+        padding: 1px;
+        width: 100px; 
     }
 
     .search-icon {
