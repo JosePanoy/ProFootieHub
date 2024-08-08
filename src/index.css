@@ -20,8 +20,8 @@
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color: hsla(0, 0%, 93%, 0.871);
+    background-color: hsl(0, 0%, 13%);
   }
   a:hover {
     color: #747bff;
