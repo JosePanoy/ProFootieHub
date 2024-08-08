@@ -23,12 +23,7 @@
     color: hsla(0, 0%, 93%, 0.871);
     background-color: hsl(0, 0%, 13%);
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
 }
 
 

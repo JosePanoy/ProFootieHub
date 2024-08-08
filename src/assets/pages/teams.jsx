@@ -39,26 +39,23 @@ const Teams = () => {
         <>
             <Navbar />
             <div className="teams-section">
-
-                <h2 className="section-title">La Liga Teams</h2>
-
-                <div className="teams-container">
+                <h2 style={{textAlign: 'left'}}>La Liga Teams</h2>
+                <div className="teams-grid">
                     {teams1.map(team => (
                         <div className="team-card" key={team.idTeam}>
-                            <img src={team.strBadge} alt={`${team.strTeam} Badge`} className="team-badge" />
-                            <h2 className="team-name">{team.strTeam}</h2>
+                            <img src={team.strBadge} alt={`${team.strTeam} Badge`} />
+                            <h2>{team.strTeam}</h2>
                         </div>
                     ))}
                 </div>
             </div>
             <div className="teams-section">
-                <h2 className="section-title">English Premier League</h2>
-
-                <div className="teams-container">
+                <h2 style={{textAlign: 'left'}}>English Premier League</h2>
+                <div className="teams-grid">
                     {teams2.map(team => (
                         <div className="team-card" key={team.idTeam}>
-                            <img src={team.strBadge} alt={`${team.strTeam} Badge`} className="team-badge" />
-                            <h2 className="team-name">{team.strTeam}</h2>
+                            <img src={team.strBadge} alt={`${team.strTeam} Badge`} />
+                            <h2>{team.strTeam}</h2>
                         </div>
                     ))}
                 </div>
