@@ -1,74 +1,57 @@
 .teams-section {
-    margin-bottom: 40px;
+    margin: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    position: relative;
+    top: 30px;
 }
 
 .section-title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
+    text-align: left;
 }
 
-.teams-container {
+.teams-container,
+.secondary-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    margin-top: 30px;
+    gap: 10px;
 }
 
-
 .team-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #4e4e4e;
+    padding: 15px;
+    text-align: center;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
 .team-card:hover {
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .team-badge {
-    width: 100px;
+    width: 100%;
     height: auto;
+    max-width: 100px;
+    margin-bottom: 10px;
 }
 
 .team-name {
-    margin-top: 10px;
-    text-align: center;
+    font-size: 1rem;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .teams-container,
+    .secondary-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 }
 
 @media (max-width: 768px) {
-    .teams-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .secondary-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-
-    .section-title {
-        font-size: 20px;
-        margin-bottom: -30px;
-        text-align: left;
-    }
-    .teams-section {
-        margin-top: 40px;
-    }
-
-    .teams-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
+    .teams-container,
     .secondary-container {
         grid-template-columns: repeat(3, 1fr);
     }
