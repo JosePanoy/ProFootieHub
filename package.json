@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@vitejs/plugin-vue": "^5.1.2",
     "axios": "^1.7.3",
     "axios-retry": "^4.5.0",
     "bootstrap": "^5.3.3",

@@ -24,6 +24,7 @@ function Navbar() {
                     <Link to="/matches" className="nav-link">Matches</Link>
                     <Link to="/players" className="nav-link">Players</Link>
                     <Link to="/standings" className="nav-link">Standings</Link>
+                    <Link to="/test" className="nav-link">Test Page</Link>
                 </div>
                 <FiMenu className="menu-icon" onClick={toggleSidebar} />
                 <div className="search-bar">
@@ -36,7 +37,7 @@ function Navbar() {
                 <Link to="/teams" className="sidebar-link">Teams</Link>
                 <Link to="/matches" className="sidebar-link">Matches</Link>
                 <Link to="/players" className="sidebar-link">Players</Link>
-                <Link to="/standings" className="sidebar-link">Standings</Link>
+                <Link to="/test" className="sidebar-link">Test Page</Link>
             </div>
         </>
     );

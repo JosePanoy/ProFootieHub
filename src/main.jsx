@@ -5,6 +5,9 @@ import Teams from './assets/pages/teams'
 import Matches from './assets/pages/matches'
 import Players from './assets/pages/players'
 import Standings from './assets/pages/standings'
+import TeamInfo from './assets/pages/team-info'
+import Test from './assets/pages/test'
+
 
 import App from './App'
 import './index.css'
@@ -21,6 +24,9 @@ root.render(
         <Route path="/matches" element={<Matches />} />
         <Route path="/players" element={<Players />} />
         <Route path="/standings" element={<Standings />} />
+        <Route path="/test" element={<Test />} />
+        <Route path="/team/:teamId" element={<TeamInfo />} />
+
       </Routes>
     </Router>
   </React.StrictMode>

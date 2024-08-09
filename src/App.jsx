@@ -23,6 +23,9 @@ const App = () => {
       case '/standings':
         setCurrentPage('standings');
         break;
+        case '/test':
+        setCurrentPage('test');
+        break;
       default:
         setCurrentPage('home');
         break;
