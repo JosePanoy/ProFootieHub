@@ -11,11 +11,10 @@ function LatestNews() {
                 const response = await axios.get('https://newsapi.org/v2/everything', {
                     params: {
                         q: 'La Liga OR Bundesliga OR "English Premier League" OR UEFA OR FIFA OR World Cup soccer',
-                        apiKey: '6193f7fa0a224a299859fb0188d89167',
+                        apiKey: import.meta.env.VITE_NEWS_API_KEY,
                         pageSize: 18,
                     },
                 });
-
 
                 const filteredArticles = response.data.articles.filter(article =>
                     article.title && article.urlToImage && article.description
