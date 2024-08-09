@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../../../components/navbar.jsx';
+import '../css/test.css';
 
 function Test () {
 

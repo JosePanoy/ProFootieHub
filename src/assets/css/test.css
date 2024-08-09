@@ -1,0 +1,28 @@
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    padding: 16px;
+}
+
+.news-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.news-image {
+    width: 100%;
+    height: auto;
+}
+
+.news-title {
+    font-size: 1.2rem;
+    margin: 8px;
+}
+
+.news-description {
+    font-size: 1rem;
+    margin: 8px;
+}
