@@ -1,17 +1,15 @@
-import React from 'react'
+import React from 'react';
 import { createRoot } from 'react-dom/client';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'; 
-import Teams from './assets/pages/teams'
-import Matches from './assets/pages/matches'
-import Players from './assets/pages/players'
-import Standings from './assets/pages/standings'
-import TeamInfo from './assets/pages/team-info'
-import Test from './assets/pages/test'
-
-
-import App from './App'
-import './index.css'
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; 
+import Teams from './assets/pages/teams';
+import Matches from './assets/pages/matches';
+import Players from './assets/pages/players';
+import Standings from './assets/pages/standings';
+import TeamInfo from './assets/pages/team-info';
+import MatchesInfo from './assets/pages/matches-info';
+import Test from './assets/pages/test';
+import App from './App';
+import './index.css';
 
 const root = createRoot(document.getElementById('root'));
 
@@ -26,8 +24,8 @@ root.render(
         <Route path="/standings" element={<Standings />} />
         <Route path="/test" element={<Test />} />
         <Route path="/team/:teamId" element={<TeamInfo />} />
-
+        <Route path="/matches-info/:teamId" element={<MatchesInfo />} />
       </Routes>
     </Router>
   </React.StrictMode>
-)
+);

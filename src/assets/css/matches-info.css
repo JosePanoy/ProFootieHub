@@ -1,0 +1,43 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 14px;
+    color: #fff;
+}
+
+thead {
+    background-color: #333;
+}
+
+thead th {
+    padding: 12px;
+    border-bottom: 2px solid #444;
+    font-weight: bold;
+    cursor: default;
+}
+
+tbody tr {
+    transition: background-color 0.3s ease; 
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tbody tr:hover {
+    background-color: #333;
+}
+
+tbody td {
+    padding: 12px;
+    border-bottom: 1px solid #444;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+}

@@ -1,32 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../../../components/navbar.jsx';
+import { useNavigate } from 'react-router-dom';
+import '../css/matches.css';
 
 function Matches() {
-    const [team, setTeam] = useState(null);
+    const [laLigaTeams, setLaLigaTeams] = useState([]);
+    const [eplTeams, setEplTeams] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
-        
-        fetch('https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=Barcelona')
-            .then(response => response.json())
-            .then(data => {
-            
-                if (data.teams && data.teams.length > 0) {
-                    setTeam(data.teams[0]);
-                }
-            })
-            .catch(error => console.error('Error fetching team data:', error));
+        const fetchTeams = async () => {
+            const laLigaResponse = await fetch('/api/football-data/v4/competitions/PD/teams', {
+                headers: { 'X-Auth-Token': 'ace877938369422289ffeb29801e56ca' }
+            });
+            const eplResponse = await fetch('/api/football-data/v4/competitions/PL/teams', {
+                headers: { 'X-Auth-Token': 'ace877938369422289ffeb29801e56ca' }
+            });
+
+            const laLigaData = await laLigaResponse.json();
+            const eplData = await eplResponse.json();
+
+            setLaLigaTeams(laLigaData.teams);
+            setEplTeams(eplData.teams);
+        };
+
+        fetchTeams();
     }, []);
+
+    const handleTeamClick = (teamId) => {
+        navigate(`/matches-info/${teamId}`);
+    };
 
     return (
         <>
             <Navbar />
-            <h1 style={{ marginTop: '100px' }}>Matches</h1>
-            {team && (
-                <div style={{ textAlign: 'center', marginTop: '20px' }}>
-                    <h2>{team.strTeam}</h2>
-                    <img src={team.strBadge} alt={`${team.strTeam} Badge`} style={{ width: '150px' }} />
-                </div>
-            )}
+            
+            <section style={{ marginTop: '70px' }}>
+                <h2 className="section-title">La Liga</h2>
+                <ul className="teams-list">
+                    {laLigaTeams.map(team => (
+                        <li key={team.id} className="team-item" onClick={() => handleTeamClick(team.id)}>
+                            {team.name}
+                        </li>
+                    ))}
+                </ul>
+            </section>
+
+            <section style={{ marginTop: '50px' }}>
+                <h2 className="section-title">English Premier League</h2>
+                <ul className="teams-list">
+                    {eplTeams.map(team => (
+                        <li key={team.id} className="team-item" onClick={() => handleTeamClick(team.id)}>
+                            {team.name}
+                        </li>
+                    ))}
+                </ul>
+            </section>
         </>
     );
 }
