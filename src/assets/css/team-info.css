@@ -1,10 +1,10 @@
 .team-info-container {
   position: relative;
-  top: 50px;
+  top: 30px;
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  border: 1px dotted gray;
+
 }
 
 .team-info-grid {
@@ -29,13 +29,15 @@
   font-size: 2rem;
   flex: 1;
   text-align: center;
+  cursor: default;
 }
 
 .team-details {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  border: 1px dotted gray;
+  cursor: default;
+
 }
 
 .detail-item {
@@ -53,6 +55,7 @@
 .team-description p {
   margin: 0;
   line-height: 1.6;
+  cursor: default;
 }
 
 .team-logo {
@@ -75,6 +78,7 @@
 .team-links p {
   margin: 0;
   text-align: center;
+  cursor: default;
 }
 
 .team-links a {
@@ -134,6 +138,12 @@
 }
 
 @media (max-width: 480px) {
+  
+  .team-info-container {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
   .team-badge {
     width: 60px;
   }
