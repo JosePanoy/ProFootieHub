@@ -15,19 +15,19 @@ function TeamInfo() {
           <div className="team-info-grid">
             <div className="team-header">
               <img src={team.strBadge} alt={`${team.strTeam} Badge`} className="team-badge" />
-              <img src={team.strLogo} alt={`${team.strTeam} Logo`} className="team-logo" />
-            </div>
-            <div className="team-name">
-              <h2>{team.strTeam}</h2>
+              <div className="team-name">{team.strTeam}</div>
             </div>
             <div className="team-details">
-              <p><strong>League:</strong> {team.strLeague}</p>
-              <p><strong>Stadium:</strong> {team.strStadium}</p>
-              <p><strong>Founded:</strong> {team.intFormedYear}</p>
-              <p><strong>Country:</strong> {team.strCountry}</p>
+              <div className="detail-item"><strong>League:</strong> {team.strLeague}</div>
+              <div className="detail-item"><strong>Stadium:</strong> {team.strStadium}</div>
+              <div className="detail-item"><strong>Founded:</strong> {team.intFormedYear}</div>
+              <div className="detail-item"><strong>Country:</strong> {team.strCountry}</div>
             </div>
             <div className="team-description">
               <p><strong>Description:</strong> {team.strDescriptionEN}</p>
+            </div>
+            <div className="team-logo">
+              <img src={team.strLogo} alt={`${team.strTeam} Logo`} />
             </div>
             <div className="team-links">
               <p><strong>Website:</strong> <a href={team.strWebsite} target="_blank" rel="noopener noreferrer">{team.strWebsite}</a></p>
